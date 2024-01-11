@@ -13,7 +13,7 @@ login_manager = LoginManager()
 ma = Marshmallow()
 db = SQLAlchemy()
 
-@login_manager.user.loader
+@LoginManager.user_loader
 def load_user(user_id):
     return User.query.get(user_id)
 
